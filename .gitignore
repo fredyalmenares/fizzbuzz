@@ -1,2 +1,3 @@
 .idea
 src/venv-fizzbuzz/
+src/__pycache__/

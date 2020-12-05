@@ -1,3 +1,4 @@
 .idea
 src/venv-fizzbuzz/
 src/__pycache__/
+.pytest_cache

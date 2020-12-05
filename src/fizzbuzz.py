@@ -52,5 +52,4 @@ def calculate_fizzbuzz_range(start: int, end: int) -> tuple:
         raise ValueError(f'The start number ({start}) should not be greater than the end number ({end})!')
     if type(start) != int or type(start) != int:
         raise ValueError(f'Both inputs should be numbers!')
-
     return tuple(calculate_fizzbuzz(i) for i in range(start, end + 1))

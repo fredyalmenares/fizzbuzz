@@ -12,7 +12,13 @@ def calculate_fizzbuzz(number: int) -> Union[str, int]:
     -------
     result : Union[str, int]
         FizzBuzz output number or string.
+    Raises
+    ------
+    ValueError
+        If the input is not a number number.
     """
+    if type(number) != int:
+        raise ValueError(f'The input value ({number}) should should be a number, but it is a {type(number).__name__}!')
     if number % 3 == 0 and number % 5 == 0:
         return 'FizzBuzz'
     elif number % 3 == 0:
@@ -40,12 +46,11 @@ def calculate_fizzbuzz_range(start: int, end: int) -> tuple:
         Raises
         ------
         ValueError
-            if start number is greater than end number.
+            If one of the inputs is not a number or if start number is greater than end number.
         """
     if start > end:
         raise ValueError(f'The start number ({start}) should not be greater than the end number ({end})!')
+    if type(start) != int or type(start) != int:
+        raise ValueError(f'Both inputs should be numbers!')
 
-    return tuple(calculate_fizzbuzz(i) for i in range(start, end))
-
-
-print(calculate_fizzbuzz_range(1, 100))
+    return tuple(calculate_fizzbuzz(i) for i in range(start, end + 1))
